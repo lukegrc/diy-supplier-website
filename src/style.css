@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: white !important;
+  color: rgb(10, 10, 10) !important;
+  --mainOrange: #e03e07;
+  --mainDarkGrey: #1a1a1a;
+  --mainLightGrey: #262626;
+  --mainBlue: #16224f;
+  --accentColor: #ff6b35;
+  --lightGray: #f8f9fa;
+  --textColor: #333;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  line-height: 1.6;
+}
+
+.toolbar {
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 4.5em;
+  position: fixed;
+  background-color: rgba(22, 34, 79, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.toolbar-navbar {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  z-index: 1000;
+  padding: 0 1.5em;
+  background-color: transparent;
+}
+
+.toolbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.toolbar-title h1 {
+  font-size: 1.4em;
+  color: white;
+  margin: 0;
+  margin-left: 0.5em;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.toolbar-logo img {
+  margin-left: 1em;
+  height: 2.5em;
+  width: auto;
+  transition: var(--transition);
+}
+
+.toolbar-logo img:hover {
+  transform: scale(1.05);
+}
+
+.toolbar-nav-items {
+  color: white;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  text-align: center;
+  gap: 1em;
+}
+
+.toolbar-nav-items li {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  position: relative;
+}
+
+.toolbar-nav-items li a {
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  padding: 0.75em 1.25em;
+  position: relative;
+  cursor: pointer;
+  transition: var(--transition);
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.toolbar-nav-items li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--accentColor);
+  transform: translateY(-2px);
+}
+
+.toolbar-nav-items li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--accentColor);
+  transition: var(--transition);
+  transform: translateX(-50%);
+}
+
+.toolbar-nav-items li a:hover::after {
+  width: 80%;
+}
+
+.spacer {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .toolbar-nav-items {
+    display: none;
+  }
+
+  .toolbar-title h1 {
+    font-size: 1.1em;
+  }
+
+  .toolbar-navbar {
+    padding: 0 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  .toolbar-toggle-button {
+    display: none;
+  }
+}
