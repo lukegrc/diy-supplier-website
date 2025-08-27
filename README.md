@@ -1,4 +1,4 @@
-# Grech Hardware Distributors Website
+# DIY Supplier Website
 
 A modern, responsive website for Grech Hardware Distributors, built with React and featuring a professional design optimized for the hardware industry.
 
@@ -123,13 +123,6 @@ The application can be deployed to any static hosting service:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-- **Company**: Grech Hardware Distributors
-- **Email**: grechhd@gmail.com
-- **Phone**: +356 21496475
-- **Address**: Triq S-Salib ta' L-Mriehel, Central Business District, Mriehel, BKR 3020, Malta
 
 ## Acknowledgments
 
